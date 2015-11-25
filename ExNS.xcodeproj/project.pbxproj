@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		1E4E1DD21C0616AE00BB676C /* ExNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E4E1DD11C0616AE00BB676C /* ExNS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E4E1DD91C0616AE00BB676C /* ExNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4E1DCE1C0616AE00BB676C /* ExNS.framework */; };
-		1E4E1DDE1C0616AE00BB676C /* ExNSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E1DDD1C0616AE00BB676C /* ExNSTests.swift */; };
+		1E4E1DED1C06206F00BB676C /* NSNumber+ExNS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E1DEC1C06206F00BB676C /* NSNumber+ExNS.swift */; };
+		1E4E1DF11C0620C300BB676C /* NSNumber+ExNSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E1DF01C0620C300BB676C /* NSNumber+ExNSTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +28,9 @@
 		1E4E1DD11C0616AE00BB676C /* ExNS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExNS.h; sourceTree = "<group>"; };
 		1E4E1DD31C0616AE00BB676C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E4E1DD81C0616AE00BB676C /* ExNSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExNSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E4E1DDD1C0616AE00BB676C /* ExNSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExNSTests.swift; sourceTree = "<group>"; };
-		1E4E1DDF1C0616AE00BB676C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E4E1DEC1C06206F00BB676C /* NSNumber+ExNS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSNumber+ExNS.swift"; path = "extensions/NSNumber+ExNS.swift"; sourceTree = "<group>"; };
+		1E4E1DEE1C0620A800BB676C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ExNSTests/Info.plist; sourceTree = "<group>"; };
+		1E4E1DF01C0620C300BB676C /* NSNumber+ExNSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNumber+ExNSTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				1E4E1DD01C0616AE00BB676C /* ExNS */,
 				1E4E1DDC1C0616AE00BB676C /* ExNSTests */,
+				1E4E1DEE1C0620A800BB676C /* Info.plist */,
 				1E4E1DCF1C0616AE00BB676C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +74,7 @@
 		1E4E1DD01C0616AE00BB676C /* ExNS */ = {
 			isa = PBXGroup;
 			children = (
+				1E4E1DE81C0616FF00BB676C /* extenstions */,
 				1E4E1DD11C0616AE00BB676C /* ExNS.h */,
 				1E4E1DD31C0616AE00BB676C /* Info.plist */,
 			);
@@ -80,10 +84,26 @@
 		1E4E1DDC1C0616AE00BB676C /* ExNSTests */ = {
 			isa = PBXGroup;
 			children = (
-				1E4E1DDD1C0616AE00BB676C /* ExNSTests.swift */,
-				1E4E1DDF1C0616AE00BB676C /* Info.plist */,
+				1E4E1DEB1C061C0300BB676C /* extensions */,
 			);
-			path = ExNSTests;
+			name = ExNSTests;
+			path = ExNSTests/extensions;
+			sourceTree = "<group>";
+		};
+		1E4E1DE81C0616FF00BB676C /* extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				1E4E1DEC1C06206F00BB676C /* NSNumber+ExNS.swift */,
+			);
+			name = extenstions;
+			sourceTree = "<group>";
+		};
+		1E4E1DEB1C061C0300BB676C /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1E4E1DF01C0620C300BB676C /* NSNumber+ExNSTests.swift */,
+			);
+			name = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E4E1DED1C06206F00BB676C /* NSNumber+ExNS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E4E1DDE1C0616AE00BB676C /* ExNSTests.swift in Sources */,
+				1E4E1DF11C0620C300BB676C /* NSNumber+ExNSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +331,7 @@
 		1E4E1DE31C0616AE00BB676C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -320,12 +342,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = to4iki.com.github.ExNS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		1E4E1DE41C0616AE00BB676C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -342,16 +366,19 @@
 		1E4E1DE61C0616AE00BB676C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ExNSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = to4iki.com.github.ExNSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		1E4E1DE71C0616AE00BB676C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ExNSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = to4iki.com.github.ExNSTests;
